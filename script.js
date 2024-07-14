@@ -164,9 +164,9 @@ let songs = [
     // Playing next song by clicking on next arrow
     document.getElementById('next').addEventListener('click', ()=>{
         //alert("Hare Krishna");
-        console.log("Previous Song:");
-        console.log(audioElement.src);
-        console.log(formatTime(audioElement.duration));
+        // console.log("Previous Song:");
+        // console.log(audioElement.src);
+        // console.log(formatTime(audioElement.duration));
         if(songIndex>=8)
         {
             document.getElementById(songIndex).classList.remove('fa-circle-pause');
@@ -178,13 +178,13 @@ let songs = [
         {
             songIndex += 1;
         }
-        audioElement.src = "songs"+songIndex+".mp3";
+        // audioElement.src = "songs"+songIndex+".mp3";
         audioElement.src = songs[songIndex].filePath;
         var nextSong = new Audio(songs[(songIndex+1)%9].filePath);
-        if(isNaN(audioElement.duration))
-        {
-            timeDuration.innerText = `00:00/${nex}`
-        }
+        // if(isNaN(audioElement.duration))
+        // {
+        //     timeDuration.innerText = `00:00/${nex}`
+        // }
         // nextSong.play();
         // setTimeout(()=>{
         //     var nextSongTime = formatTime(nextSong.duration);
